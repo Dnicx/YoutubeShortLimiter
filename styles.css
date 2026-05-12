@@ -85,23 +85,58 @@ h2 {
 }
 
 .cooldown-status {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px;
-  background: #fff3cd;
-  border-radius: 6px;
-  color: #856404;
-  font-size: 14px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(238, 90, 82, 0.3);
 }
 
 .cooldown-status.hidden {
   display: none;
 }
 
+.cooldown-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
 .cooldown-icon {
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.cooldown-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cooldown-timer {
+  margin-bottom: 12px;
+}
+
+.timer-display {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.timer-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.cooldown-message {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.95;
 }
 
 /* Settings Section */

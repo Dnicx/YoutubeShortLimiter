@@ -25,10 +25,16 @@ function updateUI(state) {
   if (state.isInCoolDown) {
     cooldownStatus.classList.remove('hidden');
     const remainingMs = state.coolDownEndTime - Date.now();
+    
     if (remainingMs > 0) {
-      document.getElementById('cooldown-text').textContent = `Cool-down: ${formatTime(remainingMs)} remaining`;
+      const timeStr = formatTime(remainingMs);
+      document.getElementById('cooldown-timer').textContent = timeStr;
+      document.getElementById('cooldown-label').textContent = 'remaining';
+      document.getElementById('cooldown-message').textContent = 'Take a break! You\'ll be able to watch Shorts again soon.';
     } else {
-      document.getElementById('cooldown-text').textContent = 'Cool-down ending soon...';
+      document.getElementById('cooldown-timer').textContent = '00:00';
+      document.getElementById('cooldown-label').textContent = 'ending soon';
+      document.getElementById('cooldown-message').textContent = 'Cool-down is ending! You can watch Shorts again in a moment.';
     }
   } else {
     cooldownStatus.classList.add('hidden');

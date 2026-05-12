@@ -110,6 +110,8 @@ function checkCanWatch() {
     if (now >= sessionState.coolDownEndTime) {
       sessionState.isInCoolDown = false;
       sessionState.coolDownEndTime = null;
+      sessionState.shortsWatched = 0,
+      sessionState.timeWatchedMs = 0,
       saveSessionState();
     } else {
       return false;
